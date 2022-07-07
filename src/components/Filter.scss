@@ -1,0 +1,29 @@
+/** @format */
+@import '../variables';
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+  border: none;
+  margin-right: 30px;
+  font-size: 18px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.filter {
+  padding: 10px;
+  width: 34vh;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 7px -3px $black;
+  background-color: $White;
+  img {
+    width: 2vw;
+  }
+}

@@ -1,0 +1,33 @@
+/** @format */
+
+@import '../variables';
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto 30px auto;
+  padding: 30px 3px;
+  box-shadow: 0 4px 6px -6px $black;
+  .switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 12%;
+
+    label {
+      font-weight: 600;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.nav-light {
+  background-color: $White;
+  color: $black;
+}
+
+.nav-dark {
+  background-color: $DarkBlue;
+  color: $White;
+}

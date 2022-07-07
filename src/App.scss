@@ -1,0 +1,21 @@
+/** @format */
+@import './variables';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#light {
+  background-color: $VeryLightGray;
+  color: $black;
+}
+
+#dark {
+  background-color: $VeryDarkblue;
+  color: $White;
+}
