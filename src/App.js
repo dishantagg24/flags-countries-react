@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/name/:id' element={<SingleFlag />} />
+        <Route path='/alpha/:id' element={<SingleFlag />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </div>

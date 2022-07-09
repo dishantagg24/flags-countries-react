@@ -8,6 +8,13 @@
 
 body {
   font-family: 'Nunito Sans', sans-serif;
+  background-color: $VeryLightGray;
+  color: $black;
+}
+
+body.darktheme {
+  background-color: $VeryDarkblue;
+  color: $White;
 }
 
 #light {

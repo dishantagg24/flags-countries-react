@@ -4,17 +4,21 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { BackBtn } from '../components/BackBtn';
 import { Loader } from '../components/Loader';
+import { Link } from 'react-router-dom';
 import './SingleFlag.scss';
+import { useGlobalContext } from '../context';
 
 const SingleFlag = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState(true);
   const [flagInfo, setFlagInfo] = useState(null);
-
+  const { theme } = useGlobalContext();
   const fetchFlagInfo = async () => {
     setLoading(true);
     try {
-      const response = await fetch(`https://restcountries.com/v3.1/name/${id}`);
+      const response = await fetch(
+        `https://restcountries.com/v3.1/alpha/${id}`
+      );
       const data = await response.json();
       if (data) {
         const newData = data.map((item) => {
@@ -60,7 +64,11 @@ const SingleFlag = () => {
   }, [id]);
 
   if (loading) {
-    return <Loader />;
+    return (
+      <section className='single-flag-loading'>
+        <Loader />
+      </section>
+    );
   }
 
   const {
@@ -81,6 +89,7 @@ const SingleFlag = () => {
   const languagesArr = Object.values(languages);
   const totalLanguages = languagesArr.toString();
   const populationWCommas = population.toLocaleString('en-US');
+  console.log(borders);
   return (
     <section>
       <BackBtn />
@@ -105,7 +114,22 @@ const SingleFlag = () => {
               Capital: <span>{capital}</span>
             </h3>
             <h3 className='border'>
-              Border Countries: <span>{borders}</span>
+              Border Countries:{' '}
+              <div className='borders-name'>
+                {borders ? (
+                  borders.map((item) => {
+                    return (
+                      <Link to={`/alpha/${item}`}>
+                        <span className={`border-${theme}`}>{item}</span>
+                      </Link>
+                    );
+                  })
+                ) : (
+                  <Link to='/'>
+                    <span className={`border-${theme}`}>None</span>
+                  </Link>
+                )}
+              </div>
             </h3>
           </div>
           <div>

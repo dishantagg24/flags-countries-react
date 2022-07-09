@@ -1,0 +1,25 @@
+/** @format */
+@import '../variables.scss';
+
+.clear-filter {
+  margin: 20px auto;
+  cursor: pointer;
+
+  span {
+    font-size: 18px;
+    font-weight: 800;
+  }
+}
+
+.X {
+  color: red;
+  margin-right: 10px;
+}
+
+.clear-filter-light {
+  color: $black;
+}
+
+.clear-filter-dark {
+  color: $White;
+}
