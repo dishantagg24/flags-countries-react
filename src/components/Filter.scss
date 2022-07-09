@@ -1,29 +1,73 @@
 /** @format */
 @import '../variables';
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
-  border: none;
-  margin-right: 30px;
-  font-size: 18px;
-  &:focus {
-    outline: none;
-  }
+.select-flag {
+  cursor: pointer;
+  display: inline-block;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 15%;
 }
 
 .filter {
-  padding: 10px;
-  width: 34vh;
   border-radius: 5px;
+  // background-color: $White;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 10px;
   box-shadow: 0 1px 7px -3px $black;
-  background-color: $White;
+  p {
+    font-size: 18px;
+    font-weight: 300;
+  }
   img {
     width: 2vw;
+    transform: rotate(180deg);
   }
+}
+
+.options {
+  @extend .filter;
+  display: block;
+  margin: 10px auto;
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  p {
+    display: block;
+    margin: 0;
+    padding: 0.5rem 1.2rem;
+  }
+  .option-light:hover {
+    background-color: $DarkGray;
+    color: $DarkBlue;
+  }
+  .option-dark:hover {
+    color: $White;
+    background-color: $VeryDarkblue;
+  }
+}
+
+.select-flag-light {
+  background-color: $VeryLightGray;
+  color: $black;
+}
+
+.select-flag-dark {
+  color: $White;
+  background-color: $VeryDarkblue;
+}
+
+.filter-light,
+.options-light {
+  background-color: $White;
+  color: $black;
+}
+
+.filter-dark,
+.options-dark {
+  color: $White;
+  background-color: $DarkBlue;
 }

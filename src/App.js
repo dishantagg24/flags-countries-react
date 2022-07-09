@@ -3,7 +3,7 @@
 import { Route, Routes } from 'react-router';
 import './App.scss';
 import { Home } from './pages/Home';
-import { SingleFlag } from './pages/SingleFlag';
+import SingleFlag from './pages/SingleFlag';
 import { Error } from './pages/Error';
 import { Navbar } from './components/Navbar';
 import { useGlobalContext } from './context';
@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/flags/:id' element={<SingleFlag />} />
+        <Route path='/name/:id' element={<SingleFlag />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </div>

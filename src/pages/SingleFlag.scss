@@ -1,0 +1,39 @@
+/** @format */
+@import '../variables';
+.single-flag {
+  display: grid;
+  //   grid-template-columns: auto auto auto;
+  grid-template-areas:
+    'imgArea nameArea'
+    'imgArea nameInfoArea';
+  justify-content: start;
+
+  img {
+    grid-area: imgArea;
+    width: 47vw;
+    height: 26vw;
+    margin-right: 80px;
+  }
+  h1 {
+    grid-area: nameArea;
+    margin: 30px 0;
+    font-size: 32px;
+  }
+}
+
+.name-info {
+  grid-area: nameInfoArea;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 100px;
+  h3 {
+    font-size: 16px;
+    margin: 12px 0;
+    span {
+      font-weight: 300;
+    }
+  }
+  .border {
+    margin: 30px 0;
+  }
+}
