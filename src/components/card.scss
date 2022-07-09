@@ -3,6 +3,7 @@
 .card {
   border-radius: 10px;
   box-shadow: 0 1px 7px -3px $black;
+  max-width: 22.5vw;
   img {
     border-radius: 10px 10px 0 0;
     width: 22.5vw;
@@ -15,6 +16,7 @@
     font-size: 26px;
     font-weight: 800;
     margin: 10px auto;
+    // max-width: 22.5vw;
   }
   h3 {
     font-size: 20px;
