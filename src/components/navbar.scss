@@ -6,8 +6,9 @@ nav {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 30px 3px;
-  box-shadow: 0 4px 6px -6px $black;
+  padding: 1.875rem 0.1875rem;
+  box-shadow: 0 0.25rem 0.375rem -0.375rem $black;
+  width: 100%;
   .switch {
     display: flex;
     justify-content: space-between;
@@ -16,8 +17,8 @@ nav {
 
     label {
       font-weight: 600;
-      font-size: 18px;
-      letter-spacing: 0.5px;
+      font-size: 1.125rem;
+      letter-spacing: 0.0313rem;
     }
   }
 }
@@ -30,4 +31,44 @@ nav {
 .nav-dark {
   background-color: $DarkBlue;
   color: $White;
+}
+
+@media (max-width: 1440px) {
+  nav {
+    .switch {
+      width: 14%;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  nav {
+    .switch {
+      width: 25%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    .switch {
+      width: 30%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  nav {
+    .switch {
+      width: 46%;
+    }
+  }
+}
+
+@media (max-width: 144px) {
+  nav {
+    .switch {
+      width: 60%;
+    }
+  }
 }

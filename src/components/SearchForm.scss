@@ -2,20 +2,20 @@
 
 @import '../variables';
 .search-form {
-  padding: 10px;
-  width: 85vh;
-  border-radius: 5px;
+  padding: 0.625rem;
+  width: 40vw;
+  border-radius: 0.3125rem;
   display: inline-flex;
   justify-content: left;
-  height: 50px;
-  box-shadow: 0 1px 7px -3px $black;
+  height: 3.125rem;
+  box-shadow: 0 0.0625rem 0.4375rem -0.1875rem $black;
   img {
-    margin-left: 20px;
+    margin-left: 1.25rem;
   }
 
   input {
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     border: none;
 
     &:focus {
@@ -34,4 +34,11 @@
 .input-dark {
   background-color: $DarkBlue;
   color: $White;
+}
+
+@media (max-width: 580px) {
+  .search-form {
+    width: 95vw;
+    margin: 0 0.625rem;
+  }
 }

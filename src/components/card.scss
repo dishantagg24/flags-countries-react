@@ -1,27 +1,25 @@
 /** @format */
 @import '../variables';
 .card {
-  border-radius: 10px;
-  box-shadow: 0 1px 7px -3px $black;
-  max-width: 22.5vw;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.0625rem 0.4375rem -0.1875rem $black;
   img {
-    border-radius: 10px 10px 0 0;
+    border-radius: 0.625rem 0.625rem 0 0;
     width: 22.5vw;
     height: 30vh;
   }
   div {
-    margin: 20px auto 40px 30px;
+    margin: 1.25rem auto 2.5rem 1.875rem;
   }
   h1 {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 800;
-    margin: 10px auto;
-    // max-width: 22.5vw;
+    margin: 0.625rem auto;
   }
   h3 {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
-    margin: 5px auto;
+    margin: 0.3125rem auto;
 
     span {
       font-weight: 300;
@@ -35,4 +33,49 @@
 
 .card-dark {
   background-color: $DarkBlue;
+}
+
+@media (max-width: 1150px) {
+  .card {
+    img {
+      width: 30.95vw;
+      height: 40vh;
+    }
+  }
+}
+
+@media (max-width: 993px) {
+  .card {
+    img {
+      width: 40vw;
+      height: 40vh;
+    }
+  }
+}
+
+@media (max-width: 606px) {
+  .card {
+    img {
+      width: 60vw;
+      height: 45vh;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .card {
+    img {
+      width: 80vw;
+      height: 40vh;
+    }
+  }
+}
+
+@media (max-width: 180px) {
+  .card {
+    img {
+      width: 100vw;
+      height: 30vh;
+    }
+  }
 }

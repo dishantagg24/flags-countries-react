@@ -11,15 +11,14 @@
 }
 
 .filter {
-  border-radius: 5px;
-  // background-color: $White;
+  border-radius: 0.3125rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  box-shadow: 0 1px 7px -3px $black;
+  padding: 0.625rem;
+  box-shadow: 0 0.0625rem 0.4375rem -0.1875rem $black;
   p {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
   }
   img {
@@ -31,8 +30,8 @@
 .options {
   @extend .filter;
   display: block;
-  margin: 10px auto;
-  padding: 0px;
+  margin: 0.625rem auto;
+  padding: 0;
   position: absolute;
   width: 100%;
   p {
@@ -70,4 +69,48 @@
 .options-dark {
   color: $White;
   background-color: $DarkBlue;
+}
+
+@media (max-width: 1440px) {
+  .select-flag {
+    width: 15%;
+  }
+}
+
+@media (max-width: 1150px) {
+  .select-flag {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .select-flag {
+    width: 30%;
+  }
+}
+@media (max-width: 580px) {
+  .select-flag {
+    width: 40%;
+    position: static;
+    margin: 1.875rem 0.625rem;
+  }
+  .options {
+    position: static;
+  }
+}
+
+@media (max-width: 375px) {
+  .select-flag {
+    width: 60%;
+    position: static;
+    margin: 1.875rem 0.625rem;
+  }
+}
+
+@media (max-width: 144px) {
+  .select-flag {
+    width: 80%;
+    position: static;
+    margin: 1.875rem 0.625rem;
+  }
 }

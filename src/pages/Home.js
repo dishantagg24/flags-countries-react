@@ -9,7 +9,7 @@ import { useGlobalContext } from '../context';
 import './Home.scss';
 
 export const Home = () => {
-  const { loading, theme, flags } = useGlobalContext();
+  const { loading } = useGlobalContext();
   return (
     <section className='home'>
       <SearchForm />

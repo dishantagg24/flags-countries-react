@@ -3,12 +3,40 @@
 .card-list {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  //   grid-template-rows: auto auto auto auto;
-  gap: 60px 40px;
-  justify-content: center;
-  margin: 40px 0px;
+  gap: 3.75rem 2.5rem;
+  justify-content: space-between;
+  margin: 2.5rem auto;
 }
 .not-found {
-  margin: 20px auto;
+  margin: 1.25rem auto;
   text-align: center;
+}
+
+@media (max-width: 1150px) {
+  .card-list {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 933px) {
+  .card-list {
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    width: 90vw;
+    gap: 3.75rem 6rem;
+  }
+}
+
+@media (max-width: 606px) {
+  .card-list {
+    grid-template-columns: auto;
+    width: 60vw;
+  }
+}
+
+@media (max-width: 375px) {
+  .card-list {
+    grid-template-columns: auto;
+    width: 80vw;
+  }
 }
