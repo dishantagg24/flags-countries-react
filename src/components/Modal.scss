@@ -2,9 +2,9 @@
 @import '../variables.scss';
 
 .clear-filter {
-  margin: 1.25rem auto;
+  margin: 1.25rem auto 0 auto;
   cursor: pointer;
-
+  display: inline-block;
   span {
     font-size: 1.125rem;
     font-weight: 800;
